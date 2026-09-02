@@ -1,4 +1,4 @@
-const BASE = import.meta.env.BASE_URL || '/';
+const BASE = './';
 
 export const CATEGORIES = [
   { id: "all", name: "Toutes les recettes", icon: "Utensils" },
