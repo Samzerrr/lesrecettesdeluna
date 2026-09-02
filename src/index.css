@@ -27,6 +27,11 @@
   padding: 0;
 }
 
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-main);
   background: repeating-linear-gradient(
@@ -36,7 +41,6 @@ body {
     var(--bg-stripe-cream) 65px,
     var(--bg-stripe-cream) 130px
   );
-  background-attachment: fixed;
   color: var(--text-main);
   min-height: 100vh;
   line-height: 1.6;
@@ -92,9 +96,10 @@ body {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: var(--shadow-paper);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  will-change: transform;
 }
 
 .paper-card:hover {
@@ -131,7 +136,7 @@ body {
   border-radius: 12px;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .btn-primary {
@@ -173,14 +178,14 @@ body {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(6px);
+  background-color: rgba(15, 23, 42, 0.68);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
-  animation: fadeIn 0.25s ease-out;
+  animation: fadeIn 0.18s ease-out;
+  will-change: opacity;
 }
 
 @keyframes fadeIn {
@@ -191,7 +196,7 @@ body {
 @keyframes modalSlideUp {
   from {
     opacity: 0;
-    transform: translateY(20px) scale(0.97);
+    transform: translateY(16px) scale(0.98);
   }
   to {
     opacity: 1;
@@ -205,10 +210,12 @@ body {
   max-width: 960px;
   max-height: 90vh;
   border-radius: 24px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.28);
   overflow-y: auto;
-  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: modalSlideUp 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 
 /* Ingredients checkable list */

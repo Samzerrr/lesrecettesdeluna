@@ -75,6 +75,8 @@ export default function RecipeModal({ recipe, isFavorite, onToggleFavorite, onCl
             src={recipe.image}
             alt={recipe.shortTitle}
             className="modal-hero-img"
+            loading="eager"
+            decoding="async"
             onError={e => { e.target.src = 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80'; }}
           />
           <div className="modal-hero-overlay" />
