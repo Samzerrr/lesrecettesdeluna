@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;500;600;700;800;900&family=Fredoka:wght@600;700&display=swap');
+
+:root {
+  --bg-stripe-blue: #a0b7d5;
+  --bg-stripe-cream: #ede6d8;
+  --paper-bg: #f8f4ec;
+  --paper-bg-pure: #ffffff;
+  --paper-card-bg: #f5f0e6;
+  --cobalt-blue: #0b4ecb;
+  --cobalt-dark: #07348a;
+  --cobalt-light: #eff4ff;
+  --text-main: #1e242b;
+  --text-muted: #64748b;
+  --accent-warm: #d97706;
+  --accent-green: #10b981;
+  --border-line: rgba(11, 78, 203, 0.18);
+  --shadow-paper: 0 10px 25px -5px rgba(11, 78, 203, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 35px -10px rgba(11, 78, 203, 0.2), 0 10px 15px -5px rgba(0, 0, 0, 0.08);
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+  --font-title: 'Fredoka', 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--bg-stripe-blue) 0px,
+    var(--bg-stripe-blue) 65px,
+    var(--bg-stripe-cream) 65px,
+    var(--bg-stripe-cream) 130px
+  );
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-stripe-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-stripe-blue);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cobalt-blue);
+}
+
+/* App Shell */
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+}
+
+/* PDF Title Style */
+.pdf-title {
+  font-family: var(--font-title);
+  color: var(--cobalt-blue);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+}
+
+.pdf-divider {
+  height: 2px;
+  background: linear-gradient(90deg, var(--cobalt-blue) 0%, rgba(11, 78, 203, 0.2) 100%);
+  margin: 12px 0 20px;
+  border-radius: 2px;
+}
+
+/* Paper Container styling (PDF Card) */
+.paper-card {
+  background-color: var(--paper-bg);
+  background-image: radial-gradient(#d3c7b3 0.5px, transparent 0.5px);
+  background-size: 16px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow-paper);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.paper-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Handwritten Note Annotation Box */
+.handwritten-note {
+  font-family: var(--font-handwriting);
+  font-size: 1.45rem;
+  color: var(--cobalt-blue);
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(11, 78, 203, 0.05);
+  border: 1.5px dashed var(--cobalt-blue);
+  padding: 8px 14px;
+  border-radius: 12px;
+  transform: rotate(-1.5deg);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--cobalt-blue);
+  color: white;
+  box-shadow: 0 4px 12px rgba(11, 78, 203, 0.25);
+}
+.btn-primary:hover {
+  background-color: var(--cobalt-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(11, 78, 203, 0.35);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--cobalt-blue);
+  border: 1.5px solid var(--border-line);
+}
+.btn-secondary:hover {
+  background-color: var(--cobalt-light);
+  border-color: var(--cobalt-blue);
+}
+
+.btn-icon {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid var(--border-line);
+  color: var(--cobalt-blue);
+}
+.btn-icon:hover {
+  background: var(--cobalt-light);
+  transform: scale(1.06);
+}
+
+/* Modal Overlay */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-content {
+  background: var(--paper-bg);
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+/* Ingredients checkable list */
+.ingredient-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  user-select: none;
+}
+.ingredient-item:hover {
+  background: rgba(11, 78, 203, 0.05);
+}
+.ingredient-item.checked {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--cobalt-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.ingredient-item.checked .custom-checkbox {
+  background-color: var(--cobalt-blue);
+  color: white;
+}
+
+/* Step instruction item */
+.step-item {
+  display: flex;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid rgba(11, 78, 203, 0.08);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+}
+.step-item:hover {
+  border-color: var(--cobalt-blue);
+  box-shadow: 0 4px 12px rgba(11, 78, 203, 0.08);
+}
+.step-item.completed {
+  background: #f1f5f9;
+  opacity: 0.65;
+  border-color: transparent;
+}
+.step-item.completed .step-number {
+  background: var(--accent-green);
+  color: white;
+}
+
+.step-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--cobalt-light);
+  color: var(--cobalt-blue);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Badge Servings PDF style */
+.pdf-portion-badge {
+  font-family: var(--font-handwriting);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--cobalt-blue);
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px dashed var(--cobalt-blue);
+}
