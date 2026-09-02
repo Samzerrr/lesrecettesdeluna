@@ -1,3 +1,5 @@
+const BASE = import.meta.env.BASE_URL || '/';
+
 export const CATEGORIES = [
   { id: "all", name: "Toutes les recettes", icon: "Utensils" },
   { id: "plats", name: "Plats Chauds", icon: "Flame" },
@@ -20,7 +22,7 @@ export const RECIPES = [
     prepTime: "30 min",
     cookTime: "45 min",
     difficulty: "Facile",
-    image: "/illustrations/lasagne.png",
+    image: `${BASE}illustrations/lasagne.png`,
     note: "Plus ça mijote, meilleure sera la sauce !",
     ingredientGroups: [
       {
@@ -108,7 +110,7 @@ export const RECIPES = [
     prepTime: "15 min",
     cookTime: "30 min",
     difficulty: "Très Facile",
-    image: "/illustrations/soupe-potiron.png",
+    image: `${BASE}illustrations/soupe-potiron.png`,
     note: "Si elle est trop épaisse, ajoute un peu de bouillon ou d'eau chaude !",
     ingredientGroups: [
       {
@@ -166,7 +168,7 @@ export const RECIPES = [
     prepTime: "25 min (+ 1h30 repos)",
     cookTime: "10 min",
     difficulty: "Moyen",
-    image: "/illustrations/cheese-naans.png",
+    image: `${BASE}illustrations/cheese-naans.png`,
     note: "Utilise une poêle très chaude avec un couvercle pour un fromage bien filant !",
     ingredientGroups: [
       {
@@ -230,7 +232,7 @@ export const RECIPES = [
     prepTime: "25 min",
     cookTime: "30 min",
     difficulty: "Facile",
-    image: "/illustrations/hachis-parmentier.png",
+    image: `${BASE}illustrations/hachis-parmentier.png`,
     note: "ou utilise de la purée industrielle c'est cool aussi 😉",
     ingredientGroups: [
       {
@@ -317,7 +319,7 @@ export const RECIPES = [
     prepTime: "20 min",
     cookTime: "30 min",
     difficulty: "Facile",
-    image: "/illustrations/tartiflette.png",
+    image: `${BASE}illustrations/tartiflette.png`,
     note: "(lardon pas obligatoire)",
     ingredientGroups: [
       {
@@ -385,7 +387,7 @@ export const RECIPES = [
     prepTime: "15 min",
     cookTime: "20 min",
     difficulty: "Très Facile",
-    image: "/illustrations/poulet-creme.png",
+    image: `${BASE}illustrations/poulet-creme.png`,
     note: "Prépare tes pâtes pendant que le poulet mijote dans sa crème !",
     ingredientGroups: [
       {
@@ -455,7 +457,7 @@ export const RECIPES = [
     prepTime: "20 min",
     cookTime: "10 min",
     difficulty: "Facile",
-    image: "/illustrations/salade-cesar.png",
+    image: `${BASE}illustrations/salade-cesar.png`,
     note: "Fais tes croûtons maison au four, c'est inégalable !",
     ingredientGroups: [
       {
@@ -533,7 +535,7 @@ export const RECIPES = [
     prepTime: "15 min",
     cookTime: "10 min",
     difficulty: "Très Facile",
-    image: "/illustrations/salade-pates.png",
+    image: `${BASE}illustrations/salade-pates.png`,
     note: "Laisse refroidir 15-20 minutes au frais avant de déguster !",
     ingredientGroups: [
       {
@@ -598,7 +600,7 @@ export const RECIPES = [
     prepTime: "10 min",
     cookTime: "25 min",
     difficulty: "Moyen",
-    image: "/illustrations/risotto-fromage.png",
+    image: `${BASE}illustrations/risotto-fromage.png`,
     note: "Ajoute le bouillon louche par louche en remuant constamment !",
     ingredientGroups: [
       {
@@ -655,7 +657,7 @@ export const RECIPES = [
     prepTime: "10 min",
     cookTime: "15 min",
     difficulty: "Très Facile",
-    image: "/illustrations/gnocchis-chevre-miel.png",
+    image: `${BASE}illustrations/gnocchis-chevre-miel.png`,
     note: "/!\\ Au moment de servir, ajouter des noix concassées et un filet de miel !",
     ingredientGroups: [
       {
@@ -714,7 +716,7 @@ export const RECIPES = [
     prepTime: "15 min",
     cookTime: "15 min",
     difficulty: "Facile",
-    image: "/illustrations/riz-crousty.png",
+    image: `${BASE}illustrations/riz-crousty.png`,
     note: "Si ce sont des nuggets déjà préparés, les faire cuire puis les découper en petits morceaux !",
     ingredientGroups: [
       {
@@ -784,7 +786,7 @@ export const RECIPES = [
     prepTime: "25 min",
     cookTime: "1h30",
     difficulty: "Facile",
-    image: "/illustrations/ratatouille.png",
+    image: `${BASE}illustrations/ratatouille.png`,
     note: "Alterne les rondelles de légumes debout pour faire une magnifique spirale !",
     ingredientGroups: [
       {
@@ -858,7 +860,7 @@ export const RECIPES = [
     prepTime: "15 min",
     cookTime: "15 min",
     difficulty: "Facile",
-    image: "/illustrations/poulet-curry.png",
+    image: `${BASE}illustrations/poulet-curry.png`,
     note: "Pense à torréfier les épices 1 min dans l'huile et n'hésite pas à rajouter des noix de cajou !",
     ingredientGroups: [
       {
@@ -910,7 +912,7 @@ export const RECIPES = [
     prepTime: "20 min (+ 30 min marinade)",
     cookTime: "10 min",
     difficulty: "Facile",
-    image: "/illustrations/tenders.png",
+    image: `${BASE}illustrations/tenders.png`,
     note: "Pour une panure ultra croustillante, repasse le poulet une 2ème fois dans l'œuf puis dans la farine !",
     ingredientGroups: [
       {
@@ -975,7 +977,7 @@ export const RECIPES = [
     prepTime: "30 min",
     cookTime: "0 min",
     difficulty: "Moyen",
-    image: "/illustrations/cig-kofte.png",
+    image: `${BASE}illustrations/cig-kofte.png`,
     note: "C'est le secret du çiğ köfte : plus tu malaxes la pâte avec les mains, plus elle devient liée et savoureuse !",
     ingredientGroups: [
       {
@@ -1054,7 +1056,7 @@ export const RECIPES = [
     prepTime: "10 min",
     cookTime: "45 min",
     difficulty: "Très Facile",
-    image: "/illustrations/patate-douce.png",
+    image: `${BASE}illustrations/patate-douce.png`,
     note: "5 min avant la fin, écrase légèrement le centre pour y mélanger le chèvre frais !",
     ingredientGroups: [
       {
@@ -1103,7 +1105,7 @@ export const RECIPES = [
     prepTime: "15 min",
     cookTime: "15 min",
     difficulty: "Facile",
-    image: "/illustrations/burger.png",
+    image: `${BASE}illustrations/burger.png`,
     note: "Enfourne le burger 5 min à 180°C pour des pains ultra croustillants !",
     ingredientGroups: [
       {
@@ -1171,7 +1173,7 @@ export const RECIPES = [
     prepTime: "15 min",
     cookTime: "10 min",
     difficulty: "Facile",
-    image: "/illustrations/tacos-francais.png",
+    image: `${BASE}illustrations/tacos-francais.png`,
     note: "Plie ton tacos comme un papier cadeau et presse-le bien !",
     ingredientGroups: [
       {
@@ -1226,7 +1228,7 @@ export const RECIPES = [
     prepTime: "15 min",
     cookTime: "10 min",
     difficulty: "Facile",
-    image: "/illustrations/quesadillas.png",
+    image: `${BASE}illustrations/quesadillas.png`,
     note: "Accompagne avec ton guacamole maison bien frais !",
     ingredientGroups: [
       {
@@ -1298,7 +1300,7 @@ export const RECIPES = [
     prepTime: "10 min",
     cookTime: "5 min",
     difficulty: "Très Facile",
-    image: "/illustrations/avocado-toast.png",
+    image: `${BASE}illustrations/avocado-toast.png`,
     note: "Ajoute un filet de vinaigre balsamique et du paprika pour la touche finale !",
     ingredientGroups: [
       {
@@ -1349,7 +1351,7 @@ export const RECIPES = [
     prepTime: "10 min",
     cookTime: "12 min",
     difficulty: "Moyen",
-    image: "/illustrations/carbonara.png",
+    image: `${BASE}illustrations/carbonara.png`,
     note: "La chaleur des pâtes suffit à cuire les œufs sans les brouiller ! Pas de crème !",
     ingredientGroups: [
       {
@@ -1403,7 +1405,7 @@ export const RECIPES = [
     prepTime: "8 min",
     cookTime: "3 min",
     difficulty: "Très Facile",
-    image: "/illustrations/bagel-saumon.png",
+    image: `${BASE}illustrations/bagel-saumon.png`,
     note: "Parseme de ciboulette fraîche hachée pour plus de fraîcheur !",
     ingredientGroups: [
       {
