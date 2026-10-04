@@ -55,7 +55,8 @@ function App() {
     return (
       <div className="landing-container">
         <div className="landing-content paper-card">
-          <h1 className="landing-title">👩‍🍳 Les recettes de Luna</h1>
+          <img src="./logo.png" alt="Les recettes de Luna" className="landing-main-logo" />
+          <h1 className="landing-title">Les recettes de Luna</h1>
           <p className="landing-subtitle">Que souhaitez-vous cuisiner aujourd'hui ?</p>
           <div className="landing-choices">
             <button className="landing-btn" onClick={() => { setRecipeType('sale'); setActiveCategory('all'); }}>

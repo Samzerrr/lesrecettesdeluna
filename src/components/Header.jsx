@@ -6,11 +6,11 @@ export default function Header({ favoritesCount, showFavoritesOnly, onToggleFavo
       <div className="header-inner app-container">
         <div className="header-brand">
           <div className="header-logo">
-            <span className="logo-icon">🍽️</span>
+            <img src="./logo.png" alt="Les recettes de Luna" className="logo-image" />
           </div>
           <div>
             <h1 className="pdf-title">Les recettes de Luna</h1>
-            <p className="header-subtitle">Carnet gourmand illustré • 22 recettes faites maison</p>
+            <p className="header-subtitle">Carnet gourmand illustré</p>
           </div>
         </div>
 
