@@ -183,11 +183,24 @@
    ============================================ */
 .category-filter-scroll {
   overflow-x: auto;
-  scrollbar-width: none;
   max-width: 100%;
   min-width: 0;
+  padding-bottom: 8px; /* space for scrollbar */
 }
-.category-filter-scroll::-webkit-scrollbar { display: none; }
+.category-filter-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.category-filter-scroll::-webkit-scrollbar-track {
+  background: var(--paper-bg-pure);
+  border-radius: 10px;
+}
+.category-filter-scroll::-webkit-scrollbar-thumb {
+  background: var(--border-line);
+  border-radius: 10px;
+}
+.category-filter-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--cobalt-blue);
+}
 
 .category-filter-track {
   display: flex;
