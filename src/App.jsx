@@ -21,26 +21,7 @@ function App() {
   const [difficultyFilter, setDifficultyFilter] = useState('all');
   const [recipeType, setRecipeType] = useState(null);
 
-  if (!recipeType) {
-    return (
-      <div className="landing-container">
-        <div className="landing-content paper-card">
-          <h1 className="landing-title">👩‍🍳 Les recettes de Luna</h1>
-          <p className="landing-subtitle">Que souhaitez-vous cuisiner aujourd'hui ?</p>
-          <div className="landing-choices">
-            <button className="landing-btn" onClick={() => setRecipeType('sale')}>
-              <span className="landing-emoji">🧂</span>
-              <span className="landing-text">Salé</span>
-            </button>
-            <button className="landing-btn" onClick={() => setRecipeType('sucre')}>
-              <span className="landing-emoji">🧁</span>
-              <span className="landing-text">Sucré</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
+
 
   const toggleFavorite = (id) => {
     setFavorites(prev => {
@@ -69,6 +50,27 @@ function App() {
       return matchesSearch && matchesCategory && matchesFavorite && matchesDifficulty && matchesType && matchesFridge;
     });
   }, [search, activeCategory, showFavoritesOnly, favorites, difficultyFilter, recipeType, fridgeIngredients]);
+
+  if (!recipeType) {
+    return (
+      <div className="landing-container">
+        <div className="landing-content paper-card">
+          <h1 className="landing-title">👩‍🍳 Les recettes de Luna</h1>
+          <p className="landing-subtitle">Que souhaitez-vous cuisiner aujourd'hui ?</p>
+          <div className="landing-choices">
+            <button className="landing-btn" onClick={() => setRecipeType('sale')}>
+              <span className="landing-emoji">🧂</span>
+              <span className="landing-text">Salé</span>
+            </button>
+            <button className="landing-btn" onClick={() => setRecipeType('sucre')}>
+              <span className="landing-emoji">🧁</span>
+              <span className="landing-text">Sucré</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="app-wrapper">
