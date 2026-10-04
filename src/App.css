@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    APP WRAPPER
    ============================================ */
 .app-wrapper {
@@ -1380,7 +1380,7 @@
    ============================================ */
 .site-footer {
   margin-top: 40px;
-  background: rgba(247, 243, 235, 0.9);
+  background: var(--paper-bg-pure);
   border-top: 2px dashed var(--border-line);
   padding: 24px 0 32px;
   text-align: center;
@@ -1408,4 +1408,73 @@
 .footer-note {
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+/* ============================================
+   LANDING PAGE
+   ============================================ */
+.landing-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.landing-content {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  background: var(--paper-bg-pure);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.landing-title {
+  font-family: var(--font-title);
+  color: var(--cobalt-blue);
+  font-size: 2.5rem;
+}
+.landing-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+.landing-choices {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.landing-btn {
+  flex: 1;
+  background: var(--paper-bg);
+  border: 2px solid var(--border-line);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-main);
+}
+.landing-btn:hover {
+  transform: translateY(-5px);
+  border-color: var(--cobalt-blue);
+  box-shadow: var(--shadow-hover);
+  background: var(--cobalt-light);
+}
+.landing-emoji {
+  font-size: 3rem;
+}
+.landing-text {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .landing-choices {
+    flex-direction: column;
+  }
 }
