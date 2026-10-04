@@ -1,4 +1,4 @@
-﻿/* ============================================
+/* ============================================
    APP WRAPPER
    ============================================ */
 .app-wrapper {
@@ -184,6 +184,8 @@
 .category-filter-scroll {
   overflow-x: auto;
   scrollbar-width: none;
+  max-width: 100%;
+  min-width: 0;
 }
 .category-filter-scroll::-webkit-scrollbar { display: none; }
 

@@ -58,11 +58,11 @@ function App() {
           <h1 className="landing-title">👩‍🍳 Les recettes de Luna</h1>
           <p className="landing-subtitle">Que souhaitez-vous cuisiner aujourd'hui ?</p>
           <div className="landing-choices">
-            <button className="landing-btn" onClick={() => setRecipeType('sale')}>
+            <button className="landing-btn" onClick={() => { setRecipeType('sale'); setActiveCategory('all'); }}>
               <span className="landing-emoji">🧂</span>
               <span className="landing-text">Salé</span>
             </button>
-            <button className="landing-btn" onClick={() => setRecipeType('sucre')}>
+            <button className="landing-btn" onClick={() => { setRecipeType('sucre'); setActiveCategory('all'); }}>
               <span className="landing-emoji">🧁</span>
               <span className="landing-text">Sucré</span>
             </button>
@@ -87,20 +87,20 @@ function App() {
           <SearchBar value={search} onChange={setSearch} />
           <div className="filter-row">
             <CategoryFilter
-              categories={CATEGORIES}
+              categories={CATEGORIES.filter(c => c.type === 'all' || c.type === recipeType)}
               active={activeCategory}
               onChange={setActiveCategory}
             />
             <div className="type-filter">
               <button 
                 className={`type-btn ${recipeType === 'sale' ? 'active' : ''}`}
-                onClick={() => setRecipeType('sale')}
+                onClick={() => { setRecipeType('sale'); setActiveCategory('all'); }}
               >
                 🧂 Salé
               </button>
               <button 
                 className={`type-btn ${recipeType === 'sucre' ? 'active' : ''}`}
-                onClick={() => setRecipeType('sucre')}
+                onClick={() => { setRecipeType('sucre'); setActiveCategory('all'); }}
               >
                 🧁 Sucré
               </button>

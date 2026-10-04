@@ -1,6 +1,6 @@
-import { Utensils, Flame, Wheat, Pizza, Salad, Sandwich, Leaf, Soup } from 'lucide-react';
+import { Utensils, Flame, Wheat, Pizza, Salad, Sandwich, Leaf, Soup, Cake } from 'lucide-react';
 
-const ICON_MAP = { Utensils, Flame, Wheat, Pizza, Salad, Sandwich, Leaf, Soup };
+const ICON_MAP = { Utensils, Flame, Wheat, Pizza, Salad, Sandwich, Leaf, Soup, Cake };
 
 export default function CategoryFilter({ categories, active, onChange }) {
   return (

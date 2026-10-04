@@ -1,15 +1,15 @@
 const BASE = './';
 
 export const CATEGORIES = [
-  { id: "all", name: "Toutes les recettes", icon: "Utensils" },
-  { id: "plats", name: "Plats Chauds", icon: "Flame" },
-  { id: "pates-riz", name: "Pâtes & Riz", icon: "Wheat" },
-  { id: "fromage", name: "Fromage & Gratin", icon: "Pizza" },
-  { id: "salades", name: "Salades & Fraîcheur", icon: "Salad" },
-  { id: "street-food", name: "Street Food & Sandwich", icon: "Sandwich" },
-  { id: "vegetarien", name: "Végétarien", icon: "Leaf" },
-  { id: "soupes", name: "Soupes & Veloutés", icon: "Soup" },
-  { id: "desserts", name: "Desserts & Douceurs", icon: "Cake" }
+  { id: "all", name: "Toutes les recettes", icon: "Utensils", type: "all" },
+  { id: "plats", name: "Plats Chauds", icon: "Flame", type: "sale" },
+  { id: "pates-riz", name: "Pâtes & Riz", icon: "Wheat", type: "sale" },
+  { id: "fromage", name: "Fromage & Gratin", icon: "Pizza", type: "sale" },
+  { id: "salades", name: "Salades & Fraîcheur", icon: "Salad", type: "sale" },
+  { id: "street-food", name: "Street Food & Sandwich", icon: "Sandwich", type: "sale" },
+  { id: "vegetarien", name: "Végétarien", icon: "Leaf", type: "sale" },
+  { id: "soupes", name: "Soupes & Veloutés", icon: "Soup", type: "sale" },
+  { id: "desserts", name: "Desserts & Douceurs", icon: "Cake", type: "sucre" }
 ];
 
 export const RECIPES = [
