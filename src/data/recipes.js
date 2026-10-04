@@ -8,7 +8,8 @@ export const CATEGORIES = [
   { id: "salades", name: "Salades & Fraîcheur", icon: "Salad" },
   { id: "street-food", name: "Street Food & Sandwich", icon: "Sandwich" },
   { id: "vegetarien", name: "Végétarien", icon: "Leaf" },
-  { id: "soupes", name: "Soupes & Veloutés", icon: "Soup" }
+  { id: "soupes", name: "Soupes & Veloutés", icon: "Soup" },
+  { id: "desserts", name: "Desserts & Douceurs", icon: "Cake" }
 ];
 
 export const RECIPES = [
@@ -1435,5 +1436,135 @@ export const RECIPES = [
       }
     ],
     tags: ["bagel", "saumon", "fromage-frais", "brunch", "express", "frais"]
+  },
+  {
+    id: "crumble",
+    title: "CRUMBLE RECIPE",
+    shortTitle: "Crumble aux pommes",
+    type: "sucre",
+    category: "desserts",
+    categoryLabel: "Desserts & Douceurs",
+    servings: 2,
+    prepTime: "15 min",
+    cookTime: "15 min",
+    difficulty: "Très Facile",
+    image: `${BASE}illustrations/crumblerecipe.png`,
+    note: "Rien de mieux qu'un bon crumble tiède !",
+    ingredientGroups: [
+      {
+        name: "Garniture",
+        items: [
+          { name: "Pommes", amount: "4" }
+        ]
+      },
+      {
+        name: "Pâte à crumble",
+        items: [
+          { name: "Farine", amount: "200", unit: "g" },
+          { name: "Beurre", amount: "60", unit: "g" },
+          { name: "Flocons d'avoine", amount: "1", unit: "poignée" },
+          { name: "Sucre", amount: "1", unit: "c.à.s" },
+          { name: "Cannelle", amount: "1", unit: "pincée" },
+          { name: "Sel", amount: "1", unit: "pincée" }
+        ]
+      }
+    ],
+    instructionGroups: [
+      {
+        title: "Préparer la garniture",
+        steps: [
+          "Éplucher les pommes et les couper en petits cubes.",
+          "Faire revenir les pommes avec une noisette de beurre à feu doux.",
+          "Rajouter de la cannelle et le sucre."
+        ]
+      },
+      {
+        title: "Préparer le crumble",
+        steps: [
+          "Dans un saladier, mélanger la farine et les flocons d'avoine.",
+          "Rajouter le beurre légèrement mou.",
+          "Ajouter le sel et la cannelle.",
+          "Faire une boule avec la pâte."
+        ]
+      },
+      {
+        title: "Assemblage",
+        steps: [
+          "Mettre les pommes dans un plat.",
+          "Effriter et faire des petites boulettes avec la pâte et la disposer par dessus les pommes.",
+          "Enfourner le plat au four à 180°C pendant 15 min."
+        ]
+      }
+    ],
+    tags: ["crumble", "pomme", "dessert", "sucre", "avoine", "cannelle"]
+  },
+  {
+    id: "brioche-pralin",
+    title: "BRIOCHE PRALIN RECIPE",
+    shortTitle: "Brioche Praline",
+    type: "sucre",
+    category: "desserts",
+    categoryLabel: "Desserts & Douceurs",
+    servings: 2,
+    prepTime: "30 min",
+    cookTime: "30 min",
+    difficulty: "Moyen",
+    image: `${BASE}illustrations/briochepralinerecipe.png`,
+    note: "Idéale pour le petit déjeuner !",
+    ingredientGroups: [
+      {
+        name: "Pâte à brioche",
+        items: [
+          { name: "Farine", amount: "350", unit: "g" },
+          { name: "Levure boulangère sèche", amount: "7", unit: "g" },
+          { name: "Lait demi-écrémé tiède", amount: "120", unit: "ml" },
+          { name: "Oeufs", amount: "2" },
+          { name: "Sucre", amount: "40", unit: "g" },
+          { name: "Beurre doux mou", amount: "50", unit: "g" },
+          { name: "Sel", amount: "1", unit: "pincée" },
+          { name: "Extrait de vanille", amount: "1", unit: "c.à.c" }
+        ]
+      },
+      {
+        name: "Garniture & Dorure",
+        items: [
+          { name: "Pralin rose concassé", amount: "100", unit: "g" }
+        ]
+      }
+    ],
+    instructionGroups: [
+      {
+        title: "Préparation",
+        steps: [
+          "Prépare la levure : mélange le lait tiède avec la levure et une petite cuillère du sucre. Laisse reposer 5 à 10 min.",
+          "Prépare la pâte : Dans un saladier, mets la farine, le reste du sucre et le sel. Ajoute les œufs, la vanille, puis le mélange lait-levure.",
+          "Pétris environ 5 min, puis ajoute progressivement le beurre mou en petits morceaux. Continue à pétrir 8 à 10 min, jusqu'à obtenir une pâte souple et légèrement collante."
+        ]
+      },
+      {
+        title: "Première pousse",
+        steps: [
+          "Couvre et laisse lever 1h30 à 2h, dans un endroit tiède. La pâte doit quasiment doubler de volume.",
+          "Ajoute le pralin rose : Dégaze délicatement la pâte puis incorpore les 100 g de pralin rose. Évite de trop pétrir à ce stade : quelques tours de main suffisent.",
+          "Façonne : Divise la pâte en 3 morceaux, forme trois boudins et réalise une tresse. Dépose-la dans un moule à cake légèrement beurré ou chemisé de papier cuisson."
+        ]
+      },
+      {
+        title: "Deuxième pousse",
+        steps: [
+          "Couvre et laisse encore lever 45 min à 1 h."
+        ]
+      },
+      {
+        title: "Dorure et cuisson",
+        steps: [
+          "Préchauffe le four à 170 °C chaleur traditionnelle.",
+          "Badigeonne la brioche avec le jaune d'œuf mélangé au lait, puis parsème de pralin rose.",
+          "Fais cuire 25 à 30 min. Si elle colore trop vite, couvre-la légèrement de papier aluminium en cours de cuisson.",
+          "Laisse refroidir au moins 20–30 min avant de la couper."
+        ]
+      }
+    ],
+    tags: ["brioche", "praline", "sucre", "dessert", "viennoiserie", "petit-dejeuner"]
   }
 ];
