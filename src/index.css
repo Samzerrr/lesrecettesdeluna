@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;500;600;700;800;900&family=Fredoka:wght@600;700&display=swap');
 
 :root {
-  --bg-stripe-blue: #a0b7d5;
-  --bg-stripe-cream: #ede6d8;
-  --paper-bg: #f8f4ec;
-  --paper-bg-pure: #ffffff;
-  --paper-card-bg: #f5f0e6;
-  --cobalt-blue: #0b4ecb;
-  --cobalt-dark: #07348a;
-  --cobalt-light: #eff4ff;
-  --text-main: #1e242b;
-  --text-muted: #64748b;
-  --accent-warm: #d97706;
+  --bg-stripe-blue: #1e2631;
+  --bg-stripe-cream: #151b23;
+  --paper-bg: #151b23;
+  --paper-bg-pure: #1e2631;
+  --paper-card-bg: #1e2631;
+  --cobalt-blue: #3b82f6;
+  --cobalt-dark: #60a5fa;
+  --cobalt-light: rgba(59, 130, 246, 0.15);
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --accent-warm: #f59e0b;
   --accent-green: #10b981;
-  --border-line: rgba(11, 78, 203, 0.18);
-  --shadow-paper: 0 10px 25px -5px rgba(11, 78, 203, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-  --shadow-hover: 0 20px 35px -10px rgba(11, 78, 203, 0.2), 0 10px 15px -5px rgba(0, 0, 0, 0.08);
+  --border-line: rgba(255, 255, 255, 0.1);
+  --shadow-paper: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 20px 35px -10px rgba(0, 0, 0, 0.6), 0 10px 15px -5px rgba(0, 0, 0, 0.4);
   --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-handwriting: 'Caveat', cursive;
   --font-title: 'Fredoka', 'Outfit', sans-serif;
@@ -91,10 +91,10 @@ body {
 /* Paper Container styling (PDF Card) */
 .paper-card {
   background-color: var(--paper-bg);
-  background-image: radial-gradient(#d3c7b3 0.5px, transparent 0.5px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 16px 16px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border-line);
   box-shadow: var(--shadow-paper);
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -151,7 +151,7 @@ body {
 }
 
 .btn-secondary {
-  background-color: white;
+  background-color: var(--paper-bg-pure);
   color: var(--cobalt-blue);
   border: 1.5px solid var(--border-line);
 }
@@ -165,7 +165,7 @@ body {
   height: 42px;
   padding: 0;
   border-radius: 50%;
-  background: white;
+  background: var(--paper-bg-pure);
   border: 1px solid var(--border-line);
   color: var(--cobalt-blue);
 }
@@ -259,7 +259,7 @@ body {
   gap: 14px;
   padding: 12px 14px;
   border-radius: 12px;
-  background: white;
+  background: var(--paper-bg-pure);
   border: 1px solid rgba(11, 78, 203, 0.08);
   cursor: pointer;
   transition: all 0.2s ease;

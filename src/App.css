@@ -9,7 +9,7 @@
    HEADER
    ============================================ */
 .site-header {
-  background: rgba(247, 243, 235, 0.92);
+  background: rgba(21, 27, 35, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 2px solid var(--border-line);
@@ -93,12 +93,12 @@
    HERO SECTION
    ============================================ */
 .hero-section {
-  background: rgba(247, 243, 235, 0.85);
+  background: rgba(21, 27, 35, 0.85);
   backdrop-filter: blur(10px);
   border-radius: 24px;
   padding: 28px 28px 20px;
   margin-bottom: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--border-line);
   box-shadow: var(--shadow-paper);
 }
 
@@ -129,7 +129,7 @@
   font-family: var(--font-main);
   font-size: 1.02rem;
   font-weight: 500;
-  background: white;
+  background: var(--paper-bg-pure);
   border: 2px solid var(--border-line);
   border-radius: 16px;
   outline: none;
@@ -201,7 +201,7 @@
   padding: 8px 16px;
   border-radius: 24px;
   border: 1.5px solid var(--border-line);
-  background: white;
+  background: var(--paper-bg-pure);
   color: var(--text-muted);
   font-family: var(--font-main);
   font-size: 0.88rem;
@@ -225,19 +225,21 @@
 }
 
 /* ============================================
-   DIFFICULTY FILTER
+   TYPE & DIFFICULTY FILTERS
    ============================================ */
+.type-filter,
 .difficulty-filter {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
 }
 
+.type-btn,
 .diff-btn {
   padding: 6px 14px;
   border-radius: 20px;
   border: 1.5px solid var(--border-line);
-  background: white;
+  background: var(--paper-bg-pure);
   font-family: var(--font-main);
   font-size: 0.83rem;
   font-weight: 600;
@@ -245,10 +247,12 @@
   cursor: pointer;
   transition: all 0.2s ease;
 }
+.type-btn:hover,
 .diff-btn:hover {
   border-color: var(--cobalt-blue);
   color: var(--cobalt-blue);
 }
+.type-btn.active,
 .diff-btn.active {
   background: var(--cobalt-blue);
   border-color: var(--cobalt-blue);
@@ -586,7 +590,7 @@
 }
 
 .modal-close-btn, .modal-fav-btn {
-  background: white;
+  background: var(--paper-bg-pure);
   border: 1px solid var(--border-soft);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -594,7 +598,7 @@
   background: var(--paper-light);
 }
 .modal-fav-btn.favorited {
-  background: white;
+  background: var(--paper-bg-pure);
 }
 
 .modal-hero-text {
@@ -635,7 +639,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: white;
+  background: var(--paper-bg-pure);
   border: 1px solid var(--border-soft);
   color: var(--text-dark);
   font-size: 0.8rem;
@@ -677,7 +681,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  background: white;
+  background: var(--paper-bg-pure);
   border-radius: 16px;
   padding: 14px 20px;
   border: 1.5px solid var(--border-line);
@@ -708,7 +712,7 @@
   height: 42px;
   border-radius: 12px;
   border: 1.5px solid var(--border-line);
-  background: white;
+  background: var(--paper-bg-pure);
   font-family: var(--font-main);
   font-size: 0.95rem;
   font-weight: 700;
@@ -788,7 +792,7 @@
 }
 
 .modal-tab.active {
-  background: white;
+  background: var(--paper-bg-pure);
   color: var(--cobalt-blue);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -946,7 +950,7 @@
   padding: 6px 14px;
   border-radius: 20px;
   border: 1.5px solid var(--border-line);
-  background: white;
+  background: var(--paper-bg-pure);
   font-family: var(--font-main);
   font-size: 0.84rem;
   font-weight: 600;
@@ -978,7 +982,7 @@
   font-family: var(--font-main);
   font-size: 0.9rem;
   outline: none;
-  background: white;
+  background: var(--paper-bg-pure);
   transition: border-color 0.2s;
 }
 .fridge-custom-input:focus {
@@ -1121,7 +1125,7 @@
 }
 
 .cooking-step-area {
-  background: white;
+  background: var(--paper-bg-pure);
   border-radius: 20px;
   padding: 28px 32px;
   border: 2px solid var(--border-line);
@@ -1159,7 +1163,7 @@
   padding: 10px 20px;
   border-radius: 12px;
   border: 2px solid var(--border-line);
-  background: white;
+  background: var(--paper-bg-pure);
   font-family: var(--font-main);
   font-size: 0.9rem;
   font-weight: 700;

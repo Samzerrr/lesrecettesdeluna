@@ -19,6 +19,7 @@ function App() {
   const [showFridgeMode, setShowFridgeMode] = useState(false);
   const [fridgeIngredients, setFridgeIngredients] = useState([]);
   const [difficultyFilter, setDifficultyFilter] = useState('all');
+  const [recipeType, setRecipeType] = useState('sale');
 
   const toggleFavorite = (id) => {
     setFavorites(prev => {
@@ -39,13 +40,14 @@ function App() {
       const matchesCategory = activeCategory === 'all' || r.category === activeCategory;
       const matchesFavorite = !showFavoritesOnly || favorites.includes(r.id);
       const matchesDifficulty = difficultyFilter === 'all' || r.difficulty === difficultyFilter;
+      const matchesType = (r.type || 'sale') === recipeType;
       const matchesFridge = fridgeIngredients.length === 0 ||
         fridgeIngredients.some(fi =>
           r.ingredientGroups.some(g => g.items.some(i => i.name.toLowerCase().includes(fi.toLowerCase())))
         );
-      return matchesSearch && matchesCategory && matchesFavorite && matchesDifficulty && matchesFridge;
+      return matchesSearch && matchesCategory && matchesFavorite && matchesDifficulty && matchesType && matchesFridge;
     });
-  }, [search, activeCategory, showFavoritesOnly, favorites, difficultyFilter, fridgeIngredients]);
+  }, [search, activeCategory, showFavoritesOnly, favorites, difficultyFilter, recipeType, fridgeIngredients]);
 
   return (
     <div className="app-wrapper">
@@ -66,6 +68,20 @@ function App() {
               active={activeCategory}
               onChange={setActiveCategory}
             />
+            <div className="type-filter">
+              <button 
+                className={`type-btn ${recipeType === 'sale' ? 'active' : ''}`}
+                onClick={() => setRecipeType('sale')}
+              >
+                🧂 Salé
+              </button>
+              <button 
+                className={`type-btn ${recipeType === 'sucre' ? 'active' : ''}`}
+                onClick={() => setRecipeType('sucre')}
+              >
+                🧁 Sucré
+              </button>
+            </div>
             <div className="difficulty-filter">
               {['all', 'Très Facile', 'Facile', 'Moyen'].map(d => (
                 <button
@@ -97,7 +113,7 @@ function App() {
             {showFavoritesOnly && <span> • ❤️ Favoris</span>}
             {fridgeIngredients.length > 0 && <span> • 🧊 Frigo ({fridgeIngredients.length})</span>}
           </span>
-          {(search || activeCategory !== 'all' || difficultyFilter !== 'all' || showFavoritesOnly || fridgeIngredients.length > 0) && (
+          {(search || activeCategory !== 'all' || difficultyFilter !== 'all' || showFavoritesOnly || fridgeIngredients.length > 0 || recipeType === 'sucre') && (
             <button
               className="btn btn-secondary btn-sm reset-filters-btn"
               onClick={() => {
@@ -106,6 +122,7 @@ function App() {
                 setDifficultyFilter('all');
                 setShowFavoritesOnly(false);
                 setFridgeIngredients([]);
+                setRecipeType('sale');
               }}
             >
               Réinitialiser les filtres
